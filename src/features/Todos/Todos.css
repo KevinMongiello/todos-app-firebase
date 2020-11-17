@@ -1,0 +1,13 @@
+.todos-container {
+	display: flex;
+	justify-content: center;
+	
+}
+
+.todos-container li {
+	list-style: circle;
+}
+
+.todos-container li.done {
+	list-style: disc;
+}
