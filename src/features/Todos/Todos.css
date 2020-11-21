@@ -11,3 +11,7 @@
 .todos-container li.done {
 	list-style: disc;
 }
+
+.header {
+	display: flex;
+}

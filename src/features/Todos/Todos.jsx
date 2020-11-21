@@ -1,9 +1,11 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
 import { add, toggle } from './Todos.reducer';
 
 import './Todos.css'; 
+import { ROUTES } from '../../common/constants';
 
 const Todos = () => {
 	const input = useRef(null);
@@ -24,7 +26,10 @@ const Todos = () => {
 	return (
 		<div className='todos-container'>
 			<div className='todos-inner'>
-				<h1>Todos</h1>
+				<div className='header'>
+					<h1>Todos</h1>
+					<Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+				</div>
 				<ul>
 					{todos.map((todo, idx) => (
 						<li key={todo.key} className={classnames(todo.done && 'done')} onClick={() => toggleTodo(idx)}>{todo.label}</li>
