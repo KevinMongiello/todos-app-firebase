@@ -1,24 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import store from './app/store';
 import { Provider } from 'react-redux';
+import { ProvideAuth } from './common/hooks/useAuth';
 import * as serviceWorker from './serviceWorker';
-import { ROUTES } from './common/constants';
-import SignUpPage from './Firebase/SignUp';
-import './Firebase/config';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 require('dotenv').config()
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
 			<Router>
-				<Switch>
-					<Route path={ROUTES.SIGN_UP}><SignUpPage /></Route>
-					<Route path='/'><App /></Route>
-				</Switch>
+				<ProvideAuth>
+					<App />
+				</ProvideAuth>
 			</Router>
     </Provider>
   </React.StrictMode>,

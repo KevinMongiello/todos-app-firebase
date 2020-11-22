@@ -23,7 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
+
 cheatsheet.md
+instructions.md
 
 # mac
 .DS_Store

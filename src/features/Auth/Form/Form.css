@@ -1,0 +1,25 @@
+.form-container {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form > input {
+	margin-bottom: 1rem;
+}
+
+.form > label {
+	margin-bottom: 0.25rem;
+}
+
+.form > .error {
+	color: red;
+}
+
+/* .form-container label, .form-container input {
+	display: block;
+} */

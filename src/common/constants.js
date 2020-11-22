@@ -1,5 +1,5 @@
 export const ROUTES = {
 	SIGN_UP: '/signup',
-	LOG_IN: '/login',
+	SIGN_IN: '/signin',
 	LOG_OUT: '/logout'
 }
